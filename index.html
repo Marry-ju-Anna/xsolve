@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>zadanie</title>
+	<link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="./style.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="./js/bootstrap.js"></script>
+	</head>
+	<body>
+		<nav>
+		<div class="">
+		<div class="row">
+			<div class="header">
+				<a href="#"><img src="./img/logo.png"></a>
+				<div class="nav_buttons">
+				<button class="direction">RTL</button>
+				<button class="menu-xs"><span class="icon">menu</span></button>
+				</div>
+			</div>
+			<div class="menu">
+				<ul id="menu">
+					<li><a href="#">Lorem</a></li>
+					<li><a href="#">Tekstem</a></li>
+					<li><a href="#">Stosowanym</a></li>
+					<li><a href="#">Jako</a></li>
+					<li><a href="#">Przykładowy</a></li>
+				</ul>
+			</div>
+			</div>
+		</div>
+		</nav>
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="./img/foto1.jpg" alt="">
+    </div>
+    <div class="item">
+      <img src="./img/foto2.jpg" alt="">
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  </a>
+</div>
+		<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-lg-9">
+				<div class="content"></div>
+				<button class="load_more">Load More...</button>
+			</div>
+			<div class="col-md-4 col-lg-3" id="sidebar">
+				<div class="newsletter">
+					<div class="newsletter_icon"></div>
+					<h3>Newsletter</h3>
+					<p>Zapisz sie:</p>
+					<form action="/" method="post">
+						<input type="email" placeholder="email">
+						<input type="submit" value="zapisz się">
+					</form>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		<footer>
+			<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h3>Menu</h3>
+					<ul>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">tekstem</a></li>
+						<li><a href="#">stosowanym</a></li>
+						<li><a href="#">jako</a></li>
+						<li><a href="#">przykładowy</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<h3>About Us</h3>
+					<p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. </p>
+				</div>
+				<div class="col-md-4">
+					<h3>Kontakt</h3>
+					<p>Lorem Ipsum jest tekstem, 107<br>
+					00-000 Warszawa </p>
+					<p><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> <a href="tel:589229937">tel +48579229937</a></p>
+					<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> email: <a href="mailto:mchulaievska@gmail.com">mchulaievska@gmail.com</a></p>
+				</div>
+			</div>
+			</div>
+		</footer>
+		<script type="text/javascript">
+		
+		var json = [{
+    "imagepath": "./img/foto2_1.jpg",
+        "heading": "Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz",
+        "details": "Standardowy blok Lorem Ipsum, używany od XV wieku, jest odtworzony niżej dla zainteresowanych. Fragmenty 1.10.32 i 1.10.33 z „de Finibus Bonorum et Malorum” Cycerona, są odtworzone w dokładnej, oryginalnej formie, wraz z angielskimi tłumaczeniami H. Rackhama z 1914 roku."
+}, {
+    "imagepath": "./img/foto2_2.jpg",
+        "heading": "Jedną z mocnych stron używania Lorem Ipsum jest",
+        "details": "Standardowy blok Lorem Ipsum, używany od XV wieku, jest odtworzony niżej dla zainteresowanych. Fragmenty 1.10.32 i 1.10.33 z „de Finibus Bonorum et Malorum” Cycerona, są odtworzone w dokładnej, oryginalnej formie, wraz z angielskimi tłumaczeniami H. Rackhama z 1914 roku."
+}, {
+    "imagepath": "./img/foto2_3.jpg",
+        "heading": "Lorem Ipsum nie jest tylko przypadkowym tekstem",
+        "details": "Standardowy blok Lorem Ipsum, używany od XV wieku, jest odtworzony niżej dla zainteresowanych. Fragmenty 1.10.32 i 1.10.33 z „de Finibus Bonorum et Malorum” Cycerona, są odtworzone w dokładnej, oryginalnej formie, wraz z angielskimi tłumaczeniami H. Rackhama z 1914 roku."
+}, {
+    "imagepath": "./img/foto2_4.jpg",
+        "heading": "Jest dostępnych wiele różnych wersji Lorem Ipsum",
+        "details": "Standardowy blok Lorem Ipsum, używany od XV wieku, jest odtworzony niżej dla zainteresowanych. Fragmenty 1.10.32 i 1.10.33 z „de Finibus Bonorum et Malorum” Cycerona, są odtworzone w dokładnej, oryginalnej formie, wraz z angielskimi tłumaczeniami H. Rackhama z 1914 roku."
+}];
+
+jQuery(function ($) {
+    $.each(json, function (i, value) {
+        var list = "<section class='hidden'><div class='row'><div class='col-md-5'><img src='" + value.imagepath + "' class='img-responsive'></div><div class='col-md-7'><h2>" + value.heading + "</h2><p>" + value.details + "</p><p><a class='read-more' href='#'>czytaj więcej...</a></p></div></div></section>"
+        $('.content').append(list);
+    });  
+    function loadMore(){
+        $(".content .hidden").slice(0,2).removeClass("hidden");
+    }
+    loadMore();
+    $(".load_more").on("click",loadMore);
+});
+$('.direction').click(function(){
+	if($(this).text()== 'RTL'){
+		$(this).text('LTR');
+		$('html').attr("dir", "rtl");
+	}else{
+		$(this).text('RTL');
+		$('html').attr("dir", "ltr");
+	}
+});
+$(window).bind('scroll', function () {
+    if ($(window).scrollTop() > 50) {
+        $('nav').addClass('fixed');
+    } else {
+        $('nav').removeClass('fixed');
+    }
+});
+$(window).on('load resize', function () {
+if($(window).width() < 992){
+$('nav>div').removeClass('container').addClass('container-fuide');
+}else{
+$('nav>div').removeClass('container-fluide').addClass('container');
+}
+});
+$('.menu-xs').click(function(){
+if($(this).text() == 'menu'){
+$(this).text('x');
+$( "#menu" ).animate({
+    left: "+=100%",
+  }, 1000);
+}else{
+$(this).text('menu');
+$( "#menu" ).animate({
+    left: "-=100%",
+  }, 1000);
+}
+});
+
+		</script>
+	</body>
+</html>

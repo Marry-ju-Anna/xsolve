@@ -1,0 +1,61 @@
+body{
+margin: 0;
+padding: 0;
+background-color: #f6f6f6;
+}
+h2{margin: 0 0 20px;}
+h3{font-size: 20px; text-transform: uppercase; margin: 10px 0;}
+a, a:hover, a:focus{color:#bf0000; text-decoration: none;}
+footer{background-color: #333;color: #fff; padding: 20px 0;}
+footer ul{padding: 0; list-style-type: none;}
+footer a, footer a:hover, footer a:focus{color:#fff; text-decoration: none;}
+.newsletter{background-color: rgba(121, 148, 167, .5); padding: 30px 15px 15px; text-align:center; margin-bottom: 20px;}
+.newsletter:before {
+    content: '';
+    border: 35px solid transparent;
+    border-top: 20px solid rgb(246, 246, 246);
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    top: 0px;
+width: 0;}
+.newsletter  .newsletter_icon{margin: 0 auto; background-image: url('./img/email.png'); background-size: cover; width: 50px; height: 50px;}
+.newsletter input{height: 40px; padding: 0 10px; margin:0 5px 10px;}
+.newsletter  input[type="submit"]{width: 100px; background-color: #bf0000;  color: #fff; border: none; display: inline-block; font-weight: bold;}
+
+.load_more{border: none; background-color:#bf0000; width: 200px; height: 60px; color: #fff; font-weight: bold; text-transform: uppercase; display: block; margin: 20px auto;}
+
+section {background-color: #fff; box-shadow: 5px 5px 5px #aaa; padding: 15px;margin-bottom: 20px;}
+section img{margin: 0 auto;}
+.carousel{margin-bottom: 20px;}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img{max-width: none; width: 100%;}
+.carousel img{max-width: none;}
+nav{background-color: #fff; margin-bottom: 20px; box-shadow: 5px 5px 5px #ccc;}
+nav.fixed {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+nav>div{padding: 0 15px;}
+nav  .header{float: left;}
+.nav_buttons, .nav_buttons button{display: inline-block;}
+nav button{height: 50px; padding: 0 30px; margin: 0 5px; border:0;}
+nav button{background-color: #ccc; font-weight: bold; }
+nav .menu{float: right;}
+nav ul{list-style-type: none; padding: 0;}
+nav ul li{display: inline-block; padding: 15px; }
+nav ul li:hover{background-color: #ccc;}
+nav button.menu-xs{display:none;}
+
+@media (max-width: 991px){
+	nav  .header, nav .menu {width: 100%; text-align: center;}
+	 nav .menu {position: relative;}
+	 nav ul{position: absolute;
+	 left: -100%;
+    width: 100%;
+    z-index: 3;
+    background-color: #fff;
+    margin-top: 0;}
+	nav ul li{display: block;}
+	nav button.menu-xs{display: inline-block;}
+}
